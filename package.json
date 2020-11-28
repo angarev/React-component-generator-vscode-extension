@@ -1,0 +1,73 @@
+{
+	"name": "react-component-generator",
+	"displayName": "React component generator",
+	"description": "Create functional component from selected name",
+	"version": "1.0.0",
+	"publisher": "Panayot Angarev",
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/angarev/React-component-generator-vscode-extension.git"
+	},
+	"icon": "assets/icon.png",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"keywords": [
+        "html",
+        "name",
+        "jsx",
+        "react",
+        "converter"
+    ],
+	"activationEvents": [
+		"onCommand:react-component-generator.createBoilerplate"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "react-component-generator.createBoilerplate",
+				"title": "Create React Component"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorHasSelection",
+					"command": "react-component-generator.createBoilerplate",
+					"group": "modification"
+				}
+			]
+		},
+		"keybindings": [
+			{
+				"when": "editorHasSelection",
+				"command": "react-component-generator.createBoilerplate",
+				"group": "modification",
+				"key": "ctrl+alt+c"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "yarn run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.51.0",
+		"eslint": "^7.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"lodash": "^4.17.20"
+	}
+}
