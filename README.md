@@ -5,7 +5,7 @@ A basic Visual Studio Code plugin that converts selected text to react functiona
 You can select your text and use the shortcut ctrl+alt+c or click on right mouse button and select "Create React Component"
 
 
-![Converting name to react functional component](https://github.com/angarev/React-component-generator-vscode-extension/master/assets/createComponent.gif)
+![Converting name to react functional component](https://github.com/angarev/React-component-generator-vscode-extension/blob/main/assets/createComponent.gif)
 
 
 
